@@ -28,6 +28,12 @@
                     <% } else if (id.equals("pelicula")) { %>
                         <%--<%@include file="WEB-INF/peliculaArreglo.jsp" %> --%>
                         <%@include file="WEB-INF/pelicula.jsp" %>
+                    <% } else if (id.equals("cines")) { %>
+                        <%--<%@include file="WEB-INF/cinesArreglo.jsp" %> --%>
+                        <%@include file="WEB-INF/cines.jsp" %>--%>
+                    <% } else if (id.equals("cine")) { %>
+                        <%--<%@include file="WEB-INF/cineArreglo.jsp" %> --%>
+                        <%@include file="WEB-INF/cine.jsp" %>
                 <% } %> 
             </div>
         </div>
