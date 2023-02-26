@@ -1,5 +1,6 @@
 package bean;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CineTarifa {
@@ -32,9 +33,14 @@ public class CineTarifa {
 	}
 
 
-	public List<CineTarifa> getCineTarifaList(String[][] registros) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<CineTarifa> getCineTarifaList(String[][] xRegistros) {
+		if ( xRegistros == null ) return null;
+		
+		List<CineTarifa> lstCineTarifa = new ArrayList<>();
+		for( String[] aCineTarifa : xRegistros )
+			lstCineTarifa.add( new CineTarifa( aCineTarifa[0], aCineTarifa[1] ) );
+		
+		return lstCineTarifa;
 	}
 
 

@@ -16,7 +16,7 @@ public class CineDAO {
 	}
 
 	public String[] getVerCine(Object idCine) {
-		db.Sentencia( String.format("call sp_getCines(%s)", idCine));
+		db.Sentencia( String.format("call sp_getCine(%s)", idCine));
 		return db.getRegistro();
 	}
 

@@ -1,6 +1,5 @@
 <%@ page pageEncoding="UTF-8"%>
-
-<%  String[] cine = ( String[] ) session.getAttribute("cine"); %>
+<% String[] cine = ( String[] ) session.getAttribute("cine"); %>
 
 <h2><%= cine[1] %></h2>
 <div class="cine-info">

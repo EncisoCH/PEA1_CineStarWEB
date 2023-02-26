@@ -1,5 +1,5 @@
-<%@ page pageEncoding="UTF-8"%>
-    
+<%@ page pageEncoding="UTF-8" %>
+<br/><h1>Nuestros Cines</h1><br/>    
 <% String[][] cines = ( String[][] ) session.getAttribute( "cines" );
    for ( String[] aCine : cines ) {%>
    
