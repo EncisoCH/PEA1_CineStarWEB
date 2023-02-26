@@ -8,6 +8,9 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.util.List;
+
+import bean.Cine;
 
 public class svlCines extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -31,6 +34,11 @@ public class svlCines extends HttpServlet {
     	session.setAttribute("id", aCines == null ? null : "cines");
     	session.setAttribute("aCines", aCines);
     	
+    	//-----LISTAS CINES
+    	//List<Cine> lstCines = CineDAO.getVerCinesList();
+    	//session.setAttribute("id", lstCines == null ? null : "cines");
+    	//session.setAttribute("lstCines", lstCines);
+    	
     } else {
     	
     	String[] aCine = CineDAO.getVerCine( idCine );
@@ -38,6 +46,13 @@ public class svlCines extends HttpServlet {
     	session.setAttribute("cine", aCine);
     	session.setAttribute("tarifas", CineDAO.getCineTarifa( idCine ));
     	session.setAttribute("peliculas", CineDAO.getCinePelicula( idCine ));
+    	
+    	//-----LISTAS CINE
+    	//Cine cine = CineDAO.getCineList( idCine );
+    	//session.setAttribute("ID", cine == null ? null : "cine" );
+    	//session.setAttribute("cine", cine);
+    	//session.setAttribute("lstCineTarifa", CineDAO.getCineTarifaList( idCine ) );
+    	//session.setAttribute("lstCinePelicula", CineDAO.getCinePeliculaList( idCine ) );
     
     }
     
