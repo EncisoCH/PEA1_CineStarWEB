@@ -1,12 +1,17 @@
 package bean;
 
+import java.util.List;
+
 public class CineTarifa {
 
 	String DiasSemana="", Precios="";
 	
-	public CineTarifa( String DiasSemana, String Precio) {
+	public CineTarifa() {
+	}
+	
+	public CineTarifa( String DiasSemana, String Precios) {
 		this.DiasSemana = DiasSemana;
-		this.Precios = Precio;
+		this.Precios = Precios;
 	}
 	
 
@@ -25,6 +30,13 @@ public class CineTarifa {
 	public void setPrecios(String precios) {
 		Precios = precios;
 	}
-	
+
+
+	public List<CineTarifa> getCineTarifaList(String[][] registros) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 	
 }

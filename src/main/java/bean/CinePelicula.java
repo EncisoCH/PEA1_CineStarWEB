@@ -1,5 +1,8 @@
 package bean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CinePelicula {
 
 	String Titulo="", Horarios="";
@@ -26,6 +29,16 @@ public class CinePelicula {
 
 	public void setHorarios(String horarios) {
 		Horarios = horarios;
+	}
+
+	public List<CinePelicula> getCinePeliculaList(String[][] registros) {
+		if ( registros == null ) return null;
+		
+		List<CinePelicula> lstCinePelicula = new ArrayList<>();
+		for( String[] aCinePelicula : registros )
+			lstCinePelicula.add( new CinePelicula( aCinePelicula[0], aCinePelicula[1]));
+		
+		return lstCinePelicula;
 	}
 	
 }
